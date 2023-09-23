@@ -89,7 +89,7 @@ input [type="text"] {
 }
 .search-form__fieldset:first-child {
   margin-inline-end: 29px;
-  margin-block-end: 5px;
+  margin-block-end: 3px;
 }
 .search-form__fieldset:nth-child(2) {
   margin-inline-end: 5px;
@@ -97,6 +97,7 @@ input [type="text"] {
   width: 260px;
 }
 /*Заголовок Город-Время*/
+
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
@@ -133,11 +134,12 @@ input [type="text"] {
 
 label span {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align:baseline;
 }
+
 input[type="checkbox"] + span {
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   background-color: transparent;
   border: 1px solid white;
 }
@@ -149,11 +151,14 @@ input[type="checkbox"]:checked + span {
   background-size: contain;
 }
 
-.search-form__label:hover {
+label .search-form__pseudo-checkbox:hover +span {
   text-decoration-line: underline;
   cursor: pointer;
 }
-
+.search-form__label-text:hover {
+  text-decoration-line: underline;
+  cursor: pointer;
+}
 .search-form__label {
   margin-inline-end: 10px;
   padding-block-end: 2px;
