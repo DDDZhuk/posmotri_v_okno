@@ -46,7 +46,7 @@ input [type="text"] {
 /*Основной блок*/
 .content {
   display: inline-flex;
-  padding: 270px 30px;
+  padding: 273px 30px;
   justify-content: center;
   align-items: start;
 }
