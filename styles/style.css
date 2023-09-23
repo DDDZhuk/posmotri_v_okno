@@ -38,69 +38,210 @@ ol {
   list-style: none;
 }
 
+
+input [type=text] {
+  -webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+} 
+
+/*Основной блок*/
 .content{
-  border:1px solid white;
+
   display: inline-flex;
 padding: 133px 30px;
 justify-content: center;
 align-items: start;
+
 }
+/*Левый блок*/
 .result {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-inline-end: 30px;
-  margin-block-start: 70px;
+  margin-block-start: 79px;
 }
+/*ЛБ-Блок с видео*/
 .result__video-container {
   position: relative;
 }
+/*Плейр*/
 .result__video {
+  object-fit: cover;
 
   width: 711px;
 height: 386px;
 }
+/*Форма*/
 .search-form {
   display: flex;
   align-items: flex-end;
 width: 711px;
 height: 54px;
-justify-content: space-between;
 }
 
-.search-form__fieldset-title {
-font-size: 18px;
-font-weight: 400;
-
-
-}
+/*Блок Город-Время*/
 .search-form__fieldset {
-  display: inline-flex;
+  display: flex;
 flex-direction: column;
 align-items: flex-start;
-gap: 5px;
 height: fit-content;
-margin-inline-end: 40px;
 border:none;
 width: fit-content;
 cursor: pointer;
 }
-
-.search-form__checkbox-list .search-form__label-text{
-  margin-inline-end: 15px;
+.search-form__fieldset:first-child {
+  margin-inline-end: 29px;
+  margin-block-end: 5px;
+}
+.search-form__fieldset:nth-child(2) {
+  margin-inline-end: 5px;
+  margin-block-end: 10px;
+  width:260px ;
+  
+}
+/*Заголовок Город-Время*/
+.search-form__fieldset-title {
+font-size: 18px;
+font-weight: 400;
+margin-bottom: 5px;
 }
 
+ 
+/*Текстовое поле*/
+.search-form__textfield{
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  color: rgba(255, 255, 255, 0.70);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  width: 225px;
+
+}
+.search-form__textfield:active {
+  border: 1px solid white;
+  outline: none;
+
+}
+
+
+.search-form__textfield:focus{
+  outline:none;
+  
+  } 
+
+.search-form__label:has(input:focus-visible) {
+outline-offset: 1px;
+outline: 1px solid white;
+} 
+
+
+
+
+
+/*Блок время*/
+
+label span {
+  display: inline-block;
+  vertical-align: middle;
+
+}
+input[type='checkbox'] + span {
+  width: 20px;
+  height: 20px;
+  background-color:transparent;
+  border: 1px solid white;
+}
+
+input[type='checkbox']:checked + span {
+  background-image: url(../images/Group_38.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
+.search-form__label:hover {
+  text-decoration-line:underline ;
+  cursor: pointer;
+}
+
+
+
+.search-form__label { 
+  margin-inline-end: 10px;
+  padding-block-end: 2px;
+}
+
+
+.search-form__checkbox-list {
+  margin-block-start: 3px;
+}
+/*Кнопки*/
+.button{
+  display: flex;
+justify-content: center;
+align-items: center;
+border: 1px solid #FFF;
+
+flex-shrink: 0;
+background-color: transparent;
+color: #FFF;
+font-size: 18px;
+font-weight: 700;
+font-family: Fira Sans Condensed;
+
+
+}
+.button:hover{
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.button:active {
+  background: #545050;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+outline-offset: 1px;
+outline: 1px solid white;
+} 
+
+/*Кнопка -Найти*/
+.search-form__submit-button {
+  width: 194px;
+height: 34px;
+margin-block-end: 5px;
+}
+/*Кнопка -Смотреть еще*/
+.more-button {
+  width: 399px;
+  height: 34px;
+}
+/*Правый блок*/
 .content__details{
   display: flex;
 flex-direction: column;
 align-items: flex-start;
-gap: 26px;
+gap: 19px;
 overflow: hidden;
 overflow-x: hidden;
 overflow-y: scroll;
+scrollbar-track-color: #1b1919;
 width: 399px;
 height: 534px;
 }
+
+
+/*Заголовок правый блок*/
 .title {
   font-family: Oswald;
   font-size: 75px;
@@ -108,28 +249,34 @@ height: 534px;
   font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
+  margin-top: 4px;
   
 }
 .content__accent {
  color: #545050;
 
 }
+/*Блок описание- видео, правый блок*/
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap:25px;
+  position: relative;
+}
 
 .content__video-card {
- 
   display: flex;
   align-items: start;
   justify-content: space-between;
 }
+/*Постеры */
 .content__video-card-thumbnail {
   width: 194px;
 height: 103px;
 flex-shrink: 0;
 
 }
-.content__list {
-  position: relative;
-}
+/*Описание  "ссылки"*/
 .content__card-link {
   text-decoration: none;
 }
@@ -148,7 +295,19 @@ font-weight: 400;
 line-height:  90% ;
 }
 
- .visually-hidden:not(input) {
+.content__video-card-description-container:hover {
+  text-decoration-line: underline;
+  cursor: pointer;
+  text-decoration-color:white;
+} 
+
+.content__video-card-description-container:active {
+  text-decoration: none;
+  background: #545050;
+}
+
+
+ .visually-hidden {
   position: absolute; /* элемент вырывают из потока */
   width: 1px; /* делают элемент очень маленьким, но таким, чтобы не пропал совсем */
   height: 1px;
