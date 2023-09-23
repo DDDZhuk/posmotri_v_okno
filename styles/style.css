@@ -13,10 +13,9 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-
 }
 
 h1,
@@ -38,21 +37,18 @@ ol {
   list-style: none;
 }
 
-
-input [type=text] {
+input [type="text"] {
   -webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-} 
+  -moz-appearance: none;
+  appearance: none;
+}
 
 /*Основной блок*/
-.content{
-
+.content {
   display: inline-flex;
-padding: 133px 30px;
-justify-content: center;
-align-items: start;
-
+  padding: 133px 30px;
+  justify-content: center;
+  align-items: start;
 }
 /*Левый блок*/
 .result {
@@ -70,26 +66,26 @@ align-items: start;
 .result__video {
   object-fit: cover;
 
-  width: 711px;
-height: 386px;
+  width: 707px;
+  height: 386px;
 }
 /*Форма*/
 .search-form {
   display: flex;
   align-items: flex-end;
-width: 711px;
-height: 54px;
+  width: 711px;
+  height: 54px;
 }
 
 /*Блок Город-Время*/
 .search-form__fieldset {
   display: flex;
-flex-direction: column;
-align-items: flex-start;
-height: fit-content;
-border:none;
-width: fit-content;
-cursor: pointer;
+  flex-direction: column;
+  align-items: flex-start;
+  height: fit-content;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
 }
 .search-form__fieldset:first-child {
   margin-inline-end: 29px;
@@ -98,106 +94,86 @@ cursor: pointer;
 .search-form__fieldset:nth-child(2) {
   margin-inline-end: 5px;
   margin-block-end: 10px;
-  width:260px ;
-  
+  width: 260px;
 }
 /*Заголовок Город-Время*/
 .search-form__fieldset-title {
-font-size: 18px;
-font-weight: 400;
-margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 5px;
 }
 
- 
 /*Текстовое поле*/
-.search-form__textfield{
+.search-form__textfield {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid white;
   border-top: 2px solid white;
-  color: rgba(255, 255, 255, 0.70);
+  color: rgba(255, 255, 255, 0.7);
   font-family: Fira Sans Condensed;
   font-size: 18px;
   font-weight: 400;
   width: 225px;
-
 }
 .search-form__textfield:active {
   border: 1px solid white;
   outline: none;
-
 }
 
-
-.search-form__textfield:focus{
-  outline:none;
-  
-  } 
+.search-form__textfield:focus {
+  outline: none;
+}
 
 .search-form__label:has(input:focus-visible) {
-outline-offset: 1px;
-outline: 1px solid white;
-} 
-
-
-
-
+  outline-offset: 1px;
+  outline: 1px solid white;
+}
 
 /*Блок время*/
 
 label span {
   display: inline-block;
   vertical-align: middle;
-
 }
-input[type='checkbox'] + span {
+input[type="checkbox"] + span {
   width: 20px;
   height: 20px;
-  background-color:transparent;
+  background-color: transparent;
   border: 1px solid white;
 }
 
-input[type='checkbox']:checked + span {
+input[type="checkbox"]:checked + span {
   background-image: url(../images/Group_38.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
-
 .search-form__label:hover {
-  text-decoration-line:underline ;
+  text-decoration-line: underline;
   cursor: pointer;
 }
 
-
-
-.search-form__label { 
+.search-form__label {
   margin-inline-end: 10px;
   padding-block-end: 2px;
 }
 
-
-.search-form__checkbox-list {
-  margin-block-start: 3px;
-}
 /*Кнопки*/
-.button{
+.button {
   display: flex;
-justify-content: center;
-align-items: center;
-border: 1px solid #FFF;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
 
-flex-shrink: 0;
-background-color: transparent;
-color: #FFF;
-font-size: 18px;
-font-weight: 700;
-font-family: Fira Sans Condensed;
-
-
+  flex-shrink: 0;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Fira Sans Condensed;
 }
-.button:hover{
+.button:hover {
   text-decoration-line: underline;
   cursor: pointer;
 }
@@ -211,15 +187,15 @@ button:focus {
 }
 
 button:focus-visible {
-outline-offset: 1px;
-outline: 1px solid white;
-} 
+  outline-offset: 1px;
+  outline: 1px solid white;
+}
 
 /*Кнопка -Найти*/
 .search-form__submit-button {
   width: 194px;
-height: 34px;
-margin-block-end: 5px;
+  height: 34px;
+  margin-block-end: 5px;
 }
 /*Кнопка -Смотреть еще*/
 .more-button {
@@ -227,19 +203,18 @@ margin-block-end: 5px;
   height: 34px;
 }
 /*Правый блок*/
-.content__details{
+.content__details {
   display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 19px;
-overflow: hidden;
-overflow-x: hidden;
-overflow-y: scroll;
-scrollbar-track-color: #1b1919;
-width: 399px;
-height: 534px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 19px;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-track-color: #1b1919;
+  width: 399px;
+  height: 534px;
 }
-
 
 /*Заголовок правый блок*/
 .title {
@@ -250,17 +225,15 @@ height: 534px;
   line-height: 94%;
   text-transform: uppercase;
   margin-top: 4px;
-  
 }
 .content__accent {
- color: #545050;
-
+  color: #545050;
 }
 /*Блок описание- видео, правый блок*/
 .content__list {
   display: flex;
   flex-direction: column;
-  gap:25px;
+  gap: 35px;
   position: relative;
 }
 
@@ -272,16 +245,15 @@ height: 534px;
 /*Постеры */
 .content__video-card-thumbnail {
   width: 194px;
-height: 103px;
-flex-shrink: 0;
-
+  height: 103px;
+  flex-shrink: 0;
 }
 /*Описание  "ссылки"*/
 .content__card-link {
   text-decoration: none;
 }
-.content__video-card-title{
-  color: #FFF;
+.content__video-card-title {
+  color: #fff;
   font-family: Oswald;
   font-size: 30px;
   font-weight: 700;
@@ -289,31 +261,32 @@ flex-shrink: 0;
   text-decoration: none;
 }
 .content__video-card-description {
-color: #FFF;
-font-size: 18px;
-font-weight: 400;
-line-height:  90% ;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 90%;
 }
 
 .content__video-card-description-container:hover {
   text-decoration-line: underline;
   cursor: pointer;
-  text-decoration-color:white;
-} 
+  text-decoration-color: white;
+}
 
 .content__video-card-description-container:active {
   text-decoration: none;
   background: #545050;
 }
 
-
- .visually-hidden {
+.visually-hidden {
   position: absolute; /* элемент вырывают из потока */
   width: 1px; /* делают элемент очень маленьким, но таким, чтобы не пропал совсем */
   height: 1px;
   margin: -1px; /* элемент убирают из поля зрения, сдвинув на размер самого себя */
   padding: 0; /* обнуляют отступы, они есть у некоторых элементов по умолчанию */
   border: 0; /* убирают границу, она тоже может быть у каких-то элементов */
-  clip: rect(0 0 0 0); /* это свойство обрезает видимую область до нулевого значения */
+  clip: rect(
+    0 0 0 0
+  ); /* это свойство обрезает видимую область до нулевого значения */
   overflow: hidden; /* на всякий случай скрывают видимое за пределами блока */
-} 
+}
