@@ -70,6 +70,9 @@ input [type="text"] {
   width: 711px;
   height: 386px;
 }
+video[poster] {
+  background-position: center;
+}
 
 /*Форма*/
 .search-form {
