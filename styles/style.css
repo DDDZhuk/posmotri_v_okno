@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -45,18 +48,16 @@ input [type="text"] {
 
 /*Основной блок*/
 .content {
-  display: inline-flex;
-  padding: 273px 30px;
+  display: flex;
+  align-items: end;
   justify-content: center;
-  align-items: start;
 }
 /*Левый блок*/
 .result {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
   margin-inline-end: 30px;
-  margin-block-start: 79px;
 }
 /*ЛБ-Блок с видео*/
 .result__video-container {
@@ -66,55 +67,47 @@ input [type="text"] {
 .result__video {
   object-fit: cover;
   object-position: center;
-  width: 707px;
+  width: 711px;
   height: 386px;
 }
+
 /*Форма*/
 .search-form {
   display: flex;
   align-items: flex-end;
-  width: 711px;
-  height: 54px;
+  justify-content: space-between;
 }
 
 /*Блок Город-Время*/
 .search-form__fieldset {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
   height: fit-content;
   border: none;
   width: fit-content;
   cursor: pointer;
 }
-.search-form__fieldset:first-child {
-  margin-inline-end: 29px;
-  margin-block-end: 3px;
-}
-.search-form__fieldset:nth-child(2) {
-  margin-inline-end: 5px;
-  margin-block-end: 10px;
-  width: 260px;
-}
-/*Заголовок Город-Время*/
 
+/*Заголовок Город-Время*/
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 /*Текстовое поле*/
 .search-form__textfield {
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid white;
-  border-top: 2px solid white;
-  color: rgba(255, 255, 255, 0.7);
-  font-family: Fira Sans Condensed;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+  color: #fff;
+  font-family: Fira Sans Condensed, Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
-  width: 225px;
+  min-width: 225px;
 }
 
 .search-form__textfield:focus {
@@ -122,47 +115,50 @@ input [type="text"] {
 }
 
 .search-form__textfield:active {
-  border: 1px solid white;
-  outline: none;
+  border: 1px solid #fff;
 }
 
 .search-form__label:has(input:focus-visible) {
   outline-offset: 1px;
-  outline: 1px solid white;
+  outline: 1px solid #fff;
 }
 
 /*Блок время*/
-
 label span {
   display: inline-block;
   vertical-align: middle;
+  text-align: center;
+}
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+.search-form__label {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
 }
 
-input[type="checkbox"] + span {
+.search-form__pseudo-checkbox {
   width: 19px;
   height: 19px;
   background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid #fff;
 }
 
-input[type="checkbox"]:checked + span {
-  background-image: url(../images/Group_38.svg);
-  background-repeat: no-repeat;
+input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
+  background-color: #fff;
   background-position: center;
   background-size: contain;
+  border: solid 1px black;
+  box-shadow: 0 0 0 1px white;
 }
 
 label .search-form__pseudo-checkbox:hover + span {
   text-decoration-line: underline;
-  cursor: pointer;
 }
 .search-form__label-text:hover {
   text-decoration-line: underline;
-  cursor: pointer;
-}
-.search-form__label {
-  margin-inline-end: 10px;
-  padding-block-end: 2px;
 }
 
 /*Кнопки*/
@@ -171,13 +167,12 @@ label .search-form__pseudo-checkbox:hover + span {
   justify-content: center;
   align-items: center;
   border: 1px solid #fff;
-
   flex-shrink: 0;
   background-color: transparent;
   color: #fff;
   font-size: 18px;
   font-weight: 700;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, Arial, sans-serif;
 }
 .button:hover {
   text-decoration-line: underline;
@@ -194,14 +189,14 @@ button:focus {
 
 button:focus-visible {
   outline-offset: 1px;
-  outline: 1px solid white;
+  outline: 1px solid #fff;
 }
 
 /*Кнопка -Найти*/
 .search-form__submit-button {
   width: 194px;
   height: 34px;
-  margin-block-end: 5px;
+  margin-block-end: -3px;
 }
 /*Кнопка -Смотреть еще*/
 .more-button {
@@ -214,12 +209,8 @@ button:focus-visible {
   flex-direction: column;
   align-items: flex-start;
   gap: 19px;
-  overflow: hidden;
-  overflow-x: hidden;
-  overflow-y: scroll;
   scrollbar-track-color: #1b1919;
   width: 399px;
-  height: 534px;
 }
 
 /*Заголовок правый блок*/
@@ -239,8 +230,10 @@ button:focus-visible {
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 30px;
+  height: 298px;
   position: relative;
+  overflow-y: auto;
 }
 
 .content__video-card {
@@ -253,11 +246,32 @@ button:focus-visible {
   width: 194px;
   height: 103px;
   flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
 }
 /*Описание  "ссылки"*/
 .content__card-link {
+  display: block;
+  margin: 2px;
   text-decoration: none;
 }
+.content__card-link :focus {
+  outline: none;
+}
+.content__card-link :focus-visible {
+  outline: 1px solid #fff;
+}
+.content__card-link:hover {
+  text-decoration-line: underline;
+  cursor: pointer;
+  text-decoration-color: #fff;
+}
+
+.content__card-link:active {
+  text-decoration: none;
+  background: #545050;
+}
+
 .content__video-card-title {
   color: #fff;
   font-family: Oswald;
@@ -271,17 +285,6 @@ button:focus-visible {
   font-size: 18px;
   font-weight: 400;
   line-height: 90%;
-}
-
-.content__video-card-description-container:hover {
-  text-decoration-line: underline;
-  cursor: pointer;
-  text-decoration-color: white;
-}
-
-.content__video-card-description-container:active {
-  text-decoration: none;
-  background: #545050;
 }
 
 .visually-hidden {
