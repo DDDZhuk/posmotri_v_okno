@@ -16,7 +16,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: 'Fira Sans Condensed', 'Aria', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -107,7 +107,7 @@ video[poster] {
   border-bottom: 1px solid #fff;
   border-top: 1px solid #fff;
   color: #fff;
-  font-family: Fira Sans Condensed, Arial, sans-serif;
+  font-family: 'Fira Sans Condensed', 'Aria', sans-serif;
   font-size: 18px;
   font-weight: 400;
   min-width: 225px;
@@ -127,11 +127,7 @@ video[poster] {
 }
 
 /*Блок время*/
-label span {
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-}
+
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
@@ -140,9 +136,13 @@ label span {
   display: flex;
   gap: 5px;
   cursor: pointer;
+  vertical-align: middle;
 }
 
 .search-form__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-content: center;
   width: 19px;
   height: 19px;
   background-color: transparent;
@@ -151,16 +151,12 @@ label span {
 
 input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
   background-color: #fff;
-  background-position: center;
-  background-size: contain;
   border: solid 1px black;
   box-shadow: 0 0 0 1px white;
 }
 
-label .search-form__pseudo-checkbox:hover + span {
-  text-decoration-line: underline;
-}
-.search-form__label-text:hover {
+
+.search-form__pseudo-checkbox:hover +.search-form__label-text {
   text-decoration-line: underline;
 }
 
@@ -175,7 +171,7 @@ label .search-form__pseudo-checkbox:hover + span {
   color: #fff;
   font-size: 18px;
   font-weight: 700;
-  font-family: Fira Sans Condensed, Arial, sans-serif;
+  font-family: 'Fira Sans Condensed', 'Aria', sans-serif;
 }
 .button:hover {
   text-decoration-line: underline;
@@ -199,7 +195,7 @@ button:focus-visible {
 .search-form__submit-button {
   width: 194px;
   height: 34px;
-  margin-block-end: -3px;
+ 
 }
 /*Кнопка -Смотреть еще*/
 .more-button {
@@ -218,7 +214,7 @@ button:focus-visible {
 
 /*Заголовок правый блок*/
 .title {
-  font-family: Oswald;
+  font-family: 'Oswald', 'Aria', sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -258,10 +254,13 @@ button:focus-visible {
   margin: 3px;
   text-decoration: none;
 }
-.content__card-link :focus {
+.content__card-link_current {
+  background-color: #545050;
+}
+.content__card-link:focus {
   outline: none;
 }
-.content__card-link :focus-visible {
+.content__card-link:focus-visible {
   outline: 1px solid #fff;
 }
 .content__card-link:hover {
@@ -277,7 +276,7 @@ button:focus-visible {
 
 .content__video-card-title {
   color: #fff;
-  font-family: Oswald;
+  font-family: 'Oswald', 'Aria', sans-serif;
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
